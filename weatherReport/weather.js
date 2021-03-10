@@ -48,6 +48,17 @@ function print() {
         n[i - 1].src = "image/" + res.data[i].wea_img + ".png";
     }
 
+    var air = document.getElementsByClassName("index")[0].children;
+    air[1].innerHTML = res.data[0].air + " " + res.data[0].air_level;
+    air[2].innerHTML = res.data[0].air_tips;
+    var index = document.getElementsByClassName("index");
+
+    for (i = 1; i < 6; i++) {
+        index[i].children[0].innerHTML = res.data[0].index[i - 1].title;
+        index[i].children[1].innerHTML = res.data[0].index[i - 1].level;
+        index[i].children[2].innerHTML = res.data[0].index[i - 1].desc;
+    }
+
     printcharts();
 }
 print();
@@ -83,7 +94,19 @@ function printcharts() {
 
 }
 
+function showblock1() {
+    document.getElementsByClassName("po")[0].style.display = "block"
+    document.getElementById("chart").style.display = "none"
+    document.getElementsByClassName("b")[0].style.left = "150px"
 
+}
+
+function showblock2() {
+    document.getElementsByClassName("po")[0].style.display = "none"
+    document.getElementById("chart").style.display = "block"
+    document.getElementsByClassName("b")[0].style.left = "0"
+
+}
 
 function reload() {
 
