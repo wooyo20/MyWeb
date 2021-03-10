@@ -67,7 +67,7 @@ function printcharts() {
             data: ['']
         },
         xAxis: {
-            data: [res.data[0].hours[0].day, res.data[0].hours[1].day, res.data[0].hours[2].day, res.data[0].hours[3].day, res.data[0].hours[4].day, res.data[0].hours[5].day, res.data[0].hours[6].day, res.data[0].hours[7].day],
+            data: [res.data[0].hours[0].hours, res.data[0].hours[1].hours, res.data[0].hours[2].hours, res.data[0].hours[3].hours, res.data[0].hours[4].hours, res.data[0].hours[5].hours, res.data[0].hours[6].hours, res.data[0].hours[7].hours],
         },
         yAxis: {},
 
